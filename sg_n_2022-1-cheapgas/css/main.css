@@ -3005,7 +3005,7 @@ body{
 		#banner h1 {
 			font-size: 3.5em;
 			font-weight: 100;
-			color: #fff;
+			color: rgba(2, 2, 2, 0.55);
 			line-height: 1em;
 			margin: 0 0 0.5em 0;
 			padding: 0;
@@ -3013,7 +3013,7 @@ body{
 
 		#banner p {
 			font-size: 1em;
-			color: rgba(255, 255, 255, 0.55);
+			color: rgba(0, 0, 0, 0.55);
 			margin-bottom: 1.75em;
 		}
 

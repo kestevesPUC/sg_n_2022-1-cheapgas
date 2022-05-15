@@ -70,7 +70,7 @@
 
                     <div class="wrap-input100 validate-input m-b-18" data-validate="Informe o seu Endereço">
                         <span class="label-input100">CEP</span>
-                        <input class="input100" type="text"  id="cep" name="cep" oninput="" placeholder="33333-333" required>
+                        <input class="input100" type="text" onkeypress="mascara(this, '#####-###')"  id="cep" name="cep" oninput="" placeholder="CEP" required>
                         <span class="focus-input100"></span>
                     </div>
                     <!-- Endereço --> 
@@ -95,7 +95,7 @@
                     
                     <div class="container-login100-form-btn text-center">
                         <a href="login.php" class="login100-form-btn">Voltar</a>
-                        <button class="login100-form-btn" id="Salvar" name="Salvar"> Salvar </button> 
+                        <button class="login100-form-btn" href="login.php" id="Salvar" name="Salvar"> Salvar </button> 
                     </div>
 
                 </form>
@@ -140,6 +140,7 @@ $(document).ready(function(){
             },
             
             error: function(error){
+                alert("O CEP informado não foi encontrado. Tente novamente!")
                 console.log(error);
                 console.log(data);
             }
@@ -147,9 +148,7 @@ $(document).ready(function(){
         });
     });
     
-
-        
-     
+   
       
     function mascara_telefone() {
         var tel_formatado = document.getElementById("telefone").value
